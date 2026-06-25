@@ -20,6 +20,15 @@
         {% endif %}
     </head>
     <body>
+        <div class="container">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-dismissible alert-{{ label }} mt-4">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
         {% block header %}
             {% include "partials/_header.html.twig" %}
         {% endblock %}
