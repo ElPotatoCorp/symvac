@@ -21,6 +21,7 @@
                         <td>{{ vacataire.nom }}</td>
                         <td>
                             <a href="{{ path('vacataire_edit', {id: vacataire.id}) }}" class="btn btn-info btn-sm">Modifier</a>
+                            <a href="{{ path('vacataire_delete', {id: vacataire.id}) }}" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
                         </td>
                     </tr>
                 {% endfor %}
